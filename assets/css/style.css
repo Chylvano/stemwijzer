@@ -1,0 +1,8 @@
+.buttons {
+    float:left;
+}
+
+.background {
+    background: url('../img/background.png') no-repeat center fixed;
+    background-size: cover;
+}

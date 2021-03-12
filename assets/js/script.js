@@ -3730,4 +3730,43 @@ var subjects = [{
   }
 ];
 
-document.write( parties.toString());
+
+
+let i = 0;
+let anwsers = [];
+
+console.log(i)
+
+home();
+
+function home() {
+document.getElementById("btnStart").onclick = function() {start()};
+document.getElementById("btnEens").style.display = "none";
+document.getElementById("btnGeen").style.display = "none";
+document.getElementById("btnOneens").style.display = "none";
+}
+
+function start() {
+  document.getElementById("title").innerHTML = subjects[i].title;
+  document.getElementById("statement").innerHTML = subjects[i].statement;
+  document.getElementById("btnEens").style.display = "block";
+  document.getElementById("btnGeen").style.display = "block";
+  document.getElementById("btnOneens").style.display = "block";
+  document.getElementById("btnStart").style.display = "none";
+  document.body.classList.remove('background');
+}
+
+function eens(){
+  i++;
+  return i;
+}
+
+function oneens(){
+  i--;
+  return i;
+}
+
+function geenvanbeide(){
+  i++;
+  return i;
+}

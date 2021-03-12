@@ -5,29 +5,35 @@
 		<head>
 			<meta charset="UTF-8">
 			<title>STEMWIJZER</title>
-			<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 			<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 			<link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+			<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 		</head>
 
-		<body>
+		<body class="background">
 			<div class="container">
 				<div class="grid-container">
                         <div id="stemWijzer">
 
-                            <h1 id="stelling">Nederland moet terug naar de Gulden</h1>
+                            <h1 id="title"></h1>
+
+							<h1 id="statement"></h1>
                             
                             <div id="buttons">
                             
-                            <button id="btnEens">EENS</button>
+							<div class="bg-white p-5"><button id="btnStart">START</button></div>
+							
+                            <button id="btnEens" onclick="eens()">EENS</button>
+							
+							<button id="btnGeen" onclick="geenvanbeide()">GEEN VAN BEIDE</button>
                             
-                            <button id="btnOneens">ONEENS</button>
+							<button id="btnOneens" onclick="oneens()">ONEENS</button>
                             
-                            <button id="btnVolgende">VOLGENDE</button>
+                          
                             
-                            </div>
-                            
-                            </div>
+                            </div>        
+                     </div>
 			</div>
     </div>
  <script src="assets/js/script.js"></script>
