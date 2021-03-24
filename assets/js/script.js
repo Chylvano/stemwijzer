@@ -46,11 +46,25 @@ function nextWindow(){
     document.getElementById("btnGeen").style.display = "none";
     document.getElementById("btnOneens").style.display = "none";
     document.getElementById("btnSkip").style.display = "none";
+    berekenEindResultaat();
     console.log(anwsers)
   }
   else{
     question++;
     document.getElementById("title").innerHTML = subjects[question].title;
     document.getElementById("statement").innerHTML = subjects[question].statement;
+  }
+}
+
+function berekenEindResultaat() {
+  for(b = 0; b < anwsers.length; b++) {
+    for(a=0;a<subjects[b].parties.length;a++){
+      subjects[b].parties[a].score = 0;
+      if(anwsers[b] == subjects[b].parties[a].position){
+        console.log("je bent het eens met " + subjects[b].parties[a].name);
+
+
+      }
+    }
   }
 }
