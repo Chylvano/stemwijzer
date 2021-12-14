@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
 	<html lang="nl">
-
 		<head>
 			<meta charset="UTF-8">
 			<title>STEMWIJZER</title>
@@ -21,10 +19,35 @@
 						  <div class="text-center">
                             <h1 id="title"></h1>
 							<h1 id="statement"></h1>
-							<div class="bg-white p-5"><button id="btnStart" class="btn btn-primary">START</button></div>
-					      </div>   
-						  
+								<div class="bg-white p-5">
+									<button id="btnStart" class="btn btn-primary">START</button></div>
+					     		 </div>
+
+						<div id="partiesSelect">
+							<h1>Partijen</h1>
+							<p>Selecteer hier welke partijen u wel wilt zien.</p>
+							<form id="partieForm">
+								<div id="partieList"></div>
+							</form>
+							<br>	
+							<button id="btnEnd" onclick="EndResultScreen()">Verder</button>
+							<button onclick="importantQuestions()">Terug</button>
+						</div>
+
+						<div id="questionSelect">
+								<h1>Belangrijke vragen</h1>
+								<p>De vragen die u hier selecteerd zullen zwaarder mee tellen.</p>
+								<form id="questionForm">
+									<div id="questionList"></div>
+								</form>
+								<br>	
+								<button onclick="importantParties()">Verder</button>
+							</div>
+						</div>
+
                             <div id="buttons text-center panel panel-default">
+
+							<button id="btnVorige" class="btn btn-primary" onclick="goBack()">VORIGE VRAAG</button>
 
                             <button id="btnEens" class="btn btn-primary" onclick="anwserPro()">EENS</button>
 							
@@ -32,11 +55,20 @@
                             
 							<button id="btnOneens" class="btn btn-danger" onclick="anwserContra()">ONEENS</button>
 							
-							<button id="btnSkip" class="btn btn-dark" onclick="nextWindow()">Sla deze vraag over</button>     
+							<button id="btnSkip" class="btn btn-dark" onclick="nextWindow()">Sla deze vraag over</button>    
+							
+							<button id="btnVerder" class="btn btn-primary" onclick="berekenEindResultaat()">Verder</button>     
                      </div>
+
+					 <div id="resultScreen">
+								<div id="partieDisplayList">
+									<h1>Parties:</h1>
+								</div>
+					</div>
 			</div>
     </div>
 	<script src="http://stemwijzer.dvc-icta.nl/testdata.js"></script>
+	<!-- <script src="assets/js/data.js"></script> -->
  	<script src="assets/js/script.js"></script>
 </body>
 </html>

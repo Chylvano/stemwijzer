@@ -1,18 +1,17 @@
 <script>
-    var getal1 = prompt("voer een nummer in");
-    var getal2 = prompt("voer een nummer in");
+    var c = test(3,7);
 
 
-    function test(){
-        if (getal1>getal2) {
-        result = getal1
-        }
-        else {
-            result = getal2
-        }
+function test(a,b){
+    if (a>b) {
+    grootste = a;
     }
-  
-test();
+    else {
+        grootste = b;
+    }
+    return grootste;
+}
 
-    console.log(result)
+console.log(c);
+
 </script>
